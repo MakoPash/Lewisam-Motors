@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lewisam Motors | Professional Auto Care Harare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'zim-red': '#e11d48',
+                        'industrial-navy': '#0f172a',
+                        'glass-white': 'rgba(255, 255, 255, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Oswald', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.8) 100%);
+        }
+        .slide {
+            display: none;
+            animation: fadeImg 1.5s ease-in-out;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeImg {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        .stats-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        }
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            transition: transform 0.3s;
+        }
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+        }
+        /* Custom Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-900 overflow-x-hidden">
+
+    <nav class="glass-nav fixed top-0 w-full z-50 py-4 px-6 md:px-12 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="https://imgur.com/R1hldMe.png" alt="Lewisam Motors" class="h-12 w-auto">
+            <span class="font-heading text-xl font-bold tracking-tight text-industrial-navy uppercase">Lewisam Motors</span>
+        </div>
+        <ul class="hidden md:flex gap-8 font-semibold text-xs uppercase tracking-widest text-slate-600">
+            <li><a href="#home" class="hover:text-zim-red transition">Home</a></li>
+            <li><a href="#services" class="hover:text-zim-red transition">Services</a></li>
+            <li><a href="#portfolio" class="hover:text-zim-red transition">Workshop</a></li>
+            <li><a href="#contact" class="hover:text-zim-red transition">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="relative h-screen w-full overflow-hidden">
+        <div id="slider">
+            <div class="slide active absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/vrekquf.png');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/pNJ3Whb.png');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/DdmkPHO.png');"></div>
+            <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/xnZWc3X.png');"></div>
+        </div>
+        
+        <div class="hero-gradient absolute inset-0 flex items-center justify-center text-center px-4">
+            <div class="max-w-4xl">
+                <span class="block text-zim-red font-bold uppercase tracking-[0.5em] mb-4 text-sm">Established Quality in Harare</span>
+                <h1 class="text-white font-heading text-5xl md:text-8xl font-bold uppercase leading-none mb-8">
+                    Personalized <br><span class="text-transparent border-b-4 border-zim-red">Attention</span> To Detail.
+                </h1>
+                <p class="text-slate-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                    Specialist diagnostics and maintenance for Toyota, Mazda, Nissan, Isuzu, and Honda. Quality care for the light motor vehicles of Harare.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <a href="https://wa.me/2634443915" class="bg-zim-red text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-industrial-navy transition duration-300">Book Service</a>
+                    <a href="tel:0242443912" class="border border-white text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-industrial-navy transition duration-300">Call Landline</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="stats-gradient py-12 px-6 md:px-12 flex flex-wrap justify-around text-center gap-8">
+        <div>
+            <span class="block text-4xl font-heading font-bold text-zim-red">25+</span>
+            <span class="text-slate-400 text-xs uppercase tracking-widest">Years Experience</span>
+        </div>
+        <div>
+            <span class="block text-4xl font-heading font-bold text-zim-red">100%</span>
+            <span class="text-slate-400 text-xs uppercase tracking-widest">Zim Owned</span>
+        </div>
+        <div>
+            <span class="block text-4xl font-heading font-bold text-zim-red">TOP TIER</span>
+            <span class="text-slate-400 text-xs uppercase tracking-widest">Diagnostics</span>
+        </div>
+        <div>
+            <span class="block text-4xl font-heading font-bold text-zim-red">MSASA</span>
+            <span class="text-slate-400 text-xs uppercase tracking-widest">Prime Location</span>
+        </div>
+    </div>
+
+    <section id="services" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="mb-16">
+            <h2 class="text-4xl md:text-6xl font-heading font-bold uppercase text-industrial-navy">Our Expertise</h2>
+            <div class="h-2 w-24 bg-zim-red mt-4"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+                <h3 class="font-heading text-xl font-bold mb-4 uppercase">General Servicing</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Comprehensive filter changes, fluid top-ups, and 21-point safety checks for light motor vehicles.</p>
+            </div>
+            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+                <h3 class="font-heading text-xl font-bold mb-4 uppercase">Advanced Diagnostics</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Precision computer-aided fault finding to solve complex engine and electrical issues fast.</p>
+            </div>
+            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+                <h3 class="font-heading text-xl font-bold mb-4 uppercase">Brakes & Suspension</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Safety first: Powerbrake maintenance, shock absorber replacement, and alignment/balancing.</p>
+            </div>
+            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+                <h3 class="font-heading text-xl font-bold mb-4 uppercase">Battery & Power</h3>
+                <p class="text-slate-600 text-sm leading-relaxed">Full electrical testing, battery replacements, and alternator servicing for reliability.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-industrial-navy py-24 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-16 text-center">
+                <h2 class="text-4xl md:text-6xl font-heading font-bold uppercase text-white">The Workshop</h2>
+                <p class="text-slate-400 mt-4 tracking-widest text-xs uppercase">Take a look inside Lewisam Motors</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <img src="https://imgur.com/vrekquf.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 1">
+                <img src="https://imgur.com/pNJ3Whb.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 2">
+                <img src="https://imgur.com/DdmkPHO.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 3">
+                <img src="https://imgur.com/xnZWc3X.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 4">
+                <img src="https://imgur.com/NiroKY3.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 5">
+                <img src="https://imgur.com/yXzXn4O.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 6">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+        <div class="lg:w-1/2">
+            <h2 class="text-4xl font-heading font-bold uppercase mb-8">Visit Our Garage</h2>
+            <div class="space-y-6">
+                <div>
+                    <h4 class="font-bold uppercase text-zim-red text-xs tracking-tighter">Address</h4>
+                    <p class="text-slate-700">178 Mangagwa Road, Harare, Zimbabwe</p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-zim-red text-xs tracking-tighter">Contact Landline</h4>
+                    <p class="text-slate-700">0242 443912 / 0242 443913</p>
+                </div>
+                <div>
+                    <h4 class="font-bold uppercase text-zim-red text-xs tracking-tighter">Diaspora Friendly</h4>
+                    <p class="text-slate-700">We accept direct payments for local vehicle maintenance.</p>
+                </div>
+                <div class="flex gap-4 mt-8">
+                    <a href="https://www.facebook.com/LewisamMotors/" class="bg-industrial-navy text-white p-3 rounded-full hover:bg-zim-red transition">FB</a>
+                    <a href="https://www.instagram.com/lewisam_motors" class="bg-industrial-navy text-white p-3 rounded-full hover:bg-zim-red transition">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="lg:w-1/2 bg-slate-50 p-10 border border-slate-200">
+            <h3 class="font-heading text-2xl font-bold mb-6 uppercase">Get An Instant Quote</h3>
+            <form class="space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full p-4 border border-slate-300 focus:outline-none focus:border-zim-red">
+                <input type="text" placeholder="Vehicle Make/Model (e.g. Toyota Hilux)" class="w-full p-4 border border-slate-300 focus:outline-none focus:border-zim-red">
+                <textarea placeholder="Service Required" rows="4" class="w-full p-4 border border-slate-300 focus:outline-none focus:border-zim-red"></textarea>
+                <button type="submit" class="w-full bg-industrial-navy text-white font-bold py-4 uppercase tracking-widest hover:bg-zim-red transition duration-300">Submit Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-slate-900 text-slate-500 py-12 text-center text-xs px-6">
+        <div class="mb-4">
+            <img src="https://imgur.com/R1hldMe.png" class="h-8 mx-auto opacity-50 mb-4" alt="Footer Logo">
+            <p>© 2026 LEWISAM MOTORS — PRECISION AUTO CARE HARARE</p>
+        </div>
+        <p class="uppercase tracking-widest">Designed by <span class="text-white font-bold">ZimWeblify</span></p>
+    </footer>
+
+    <a href="https://wa.me/2634443915" class="floating-whatsapp bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center gap-2">
+        <span class="font-bold text-sm ml-2">Chat with Lewisam</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.248 2.248 3.488 5.236 3.488 8.403 0 6.557-5.332 11.892-11.891 11.892-1.999 0-3.956-.503-5.69-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.886-9.886 0-5.448-4.438-9.886-9.886-9.886-5.448 0-9.885 4.438-9.885 9.886 0 2.221.634 4.385 1.818 6.126l-1.104 4.037 4.179-1.085z"/></svg>
+    </a>
+
+    <div id="lightbox" onclick="this.style.display='none'">
+        <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%] border-4 border-white shadow-2xl">
+    </div>
+
+    <script>
+        // Hero Slider
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function rotateSlides() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        setInterval(rotateSlides, 5000);
+
+        // Simple Gallery Lightbox
+        const galleryImgs = document.querySelectorAll('.gallery-img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        galleryImgs.forEach(img => {
+            img.onclick = () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+</html>
