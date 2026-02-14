@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lewisam Motors | Professional Auto Care Harare</title>
+    
+    <link rel="icon" type="image/png" href="https://imgur.com/R1hldMe.png">
+    <link rel="apple-touch-icon" href="https://imgur.com/R1hldMe.png">
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,13 +29,13 @@
     </script>
     <style>
         .glass-nav {
-            background: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(15px);
             -webkit-backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         .hero-gradient {
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.3) 0%, rgba(15, 23, 42, 0.8) 100%);
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%);
         }
         .slide {
             display: none;
@@ -49,20 +53,34 @@
         }
         .floating-whatsapp {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 20px;
+            right: 20px;
             z-index: 1000;
             transition: transform 0.3s;
         }
-        .floating-whatsapp:hover {
-            transform: scale(1.1);
+        .hero-accent-line {
+            height: 6px;
+            width: 120px;
+            background-color: #e11d48;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 2px;
         }
-        /* Custom Lightbox */
+        .quote-bar {
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://imgur.com/vrekquf.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        @media (max-width: 640px) {
+            .hero-title-main { font-size: 2.75rem !important; line-height: 1.1; }
+            .floating-whatsapp span { display: none; }
+        }
         #lightbox {
             display: none;
             position: fixed;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.9);
+            background: rgba(0,0,0,0.95);
             z-index: 2000;
             justify-content: center;
             align-items: center;
@@ -71,12 +89,12 @@
 </head>
 <body class="bg-white text-slate-900 overflow-x-hidden">
 
-    <nav class="glass-nav fixed top-0 w-full z-50 py-4 px-6 md:px-12 flex justify-between items-center">
+    <nav class="glass-nav fixed top-0 w-full z-50 py-3 px-4 md:px-12 flex justify-between items-center">
         <div class="flex items-center gap-3">
-            <img src="https://imgur.com/R1hldMe.png" alt="Lewisam Motors" class="h-12 w-auto">
-            <span class="font-heading text-xl font-bold tracking-tight text-industrial-navy uppercase">Lewisam Motors</span>
+            <img src="https://imgur.com/R1hldMe.png" alt="Lewisam Motors" class="h-10 md:h-12 w-auto">
+            <span class="font-heading text-lg md:text-xl font-bold tracking-tight text-industrial-navy uppercase">Lewisam Motors</span>
         </div>
-        <ul class="hidden md:flex gap-8 font-semibold text-xs uppercase tracking-widest text-slate-600">
+        <ul class="hidden lg:flex gap-8 font-semibold text-[10px] uppercase tracking-widest text-slate-600">
             <li><a href="#home" class="hover:text-zim-red transition">Home</a></li>
             <li><a href="#services" class="hover:text-zim-red transition">Services</a></li>
             <li><a href="#portfolio" class="hover:text-zim-red transition">Workshop</a></li>
@@ -84,73 +102,97 @@
         </ul>
     </nav>
 
-    <section id="home" class="relative h-screen w-full overflow-hidden">
-        <div id="slider">
-            <div class="slide active absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/vrekquf.png');"></div>
-            <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/pNJ3Whb.png');"></div>
-            <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/DdmkPHO.png');"></div>
-            <div class="slide absolute inset-0 bg-cover bg-center" style="background-image: url('https://imgur.com/xnZWc3X.png');"></div>
+    <section id="home" class="relative h-[100vh] w-full overflow-hidden">
+        <div id="slider" class="h-full">
+            <div class="slide active h-full w-full bg-cover bg-center" style="background-image: url('https://imgur.com/vrekquf.png');"></div>
+            <div class="slide h-full w-full bg-cover bg-center" style="background-image: url('https://imgur.com/pNJ3Whb.png');"></div>
+            <div class="slide h-full w-full bg-cover bg-center" style="background-image: url('https://imgur.com/DdmkPHO.png');"></div>
+            <div class="slide h-full w-full bg-cover bg-center" style="background-image: url('https://imgur.com/xnZWc3X.png');"></div>
         </div>
         
-        <div class="hero-gradient absolute inset-0 flex items-center justify-center text-center px-4">
+        <div class="hero-gradient absolute inset-0 flex items-center justify-center text-center px-6">
             <div class="max-w-4xl">
-                <span class="block text-zim-red font-bold uppercase tracking-[0.5em] mb-4 text-sm">Established Quality in Harare</span>
-                <h1 class="text-white font-heading text-5xl md:text-8xl font-bold uppercase leading-none mb-8">
-                    Personalized <br><span class="text-transparent border-b-4 border-zim-red">Attention</span> To Detail.
+                <span class="block text-zim-red font-bold uppercase tracking-[0.3em] md:tracking-[0.5em] mb-4 text-[10px] md:text-sm">Established Quality in Harare</span>
+                <h1 class="hero-title-main text-white font-heading text-4xl md:text-8xl font-bold uppercase leading-tight mb-4">
+                    Personalized <br>Attention To Detail
                 </h1>
-                <p class="text-slate-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light">
+                <div class="hero-accent-line"></div>
+                <p class="text-slate-200 text-base md:text-xl mt-8 mb-10 max-w-2xl mx-auto font-light">
                     Specialist diagnostics and maintenance for Toyota, Mazda, Nissan, Isuzu, and Honda. Quality care for the light motor vehicles of Harare.
                 </p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center">
-                    <a href="https://wa.me/2634443915" class="bg-zim-red text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-industrial-navy transition duration-300">Book Service</a>
-                    <a href="tel:0242443912" class="border border-white text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-industrial-navy transition duration-300">Call Landline</a>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#quote-section" class="bg-zim-red text-white px-8 md:px-10 py-4 md:py-5 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-white hover:text-industrial-navy transition duration-300">Book Service</a>
+                    <a href="tel:0242443912" class="border border-white text-white px-8 md:px-10 py-4 md:py-5 font-bold uppercase tracking-widest text-[10px] md:text-xs hover:bg-white hover:text-industrial-navy transition duration-300">Call Landline</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="stats-gradient py-12 px-6 md:px-12 flex flex-wrap justify-around text-center gap-8">
+    <div class="stats-gradient py-12 px-6 md:px-12 grid grid-cols-2 md:grid-cols-4 justify-center text-center gap-8">
         <div>
-            <span class="block text-4xl font-heading font-bold text-zim-red">25+</span>
-            <span class="text-slate-400 text-xs uppercase tracking-widest">Years Experience</span>
+            <span class="block text-3xl md:text-4xl font-heading font-bold text-zim-red">25+</span>
+            <span class="text-slate-400 text-[10px] uppercase tracking-widest">Years Experience</span>
         </div>
         <div>
-            <span class="block text-4xl font-heading font-bold text-zim-red">100%</span>
-            <span class="text-slate-400 text-xs uppercase tracking-widest">Zim Owned</span>
+            <span class="block text-3xl md:text-4xl font-heading font-bold text-zim-red">100%</span>
+            <span class="text-slate-400 text-[10px] uppercase tracking-widest">Zim Owned</span>
         </div>
         <div>
-            <span class="block text-4xl font-heading font-bold text-zim-red">TOP TIER</span>
-            <span class="text-slate-400 text-xs uppercase tracking-widest">Diagnostics</span>
+            <span class="block text-3xl md:text-4xl font-heading font-bold text-zim-red">TOP TIER</span>
+            <span class="text-slate-400 text-[10px] uppercase tracking-widest">Diagnostics</span>
         </div>
         <div>
-            <span class="block text-4xl font-heading font-bold text-zim-red">MSASA</span>
-            <span class="text-slate-400 text-xs uppercase tracking-widest">Prime Location</span>
+            <span class="block text-3xl md:text-4xl font-heading font-bold text-zim-red">HARARE</span>
+            <span class="text-slate-400 text-[10px] uppercase tracking-widest">Local Experts</span>
         </div>
     </div>
 
     <section id="services" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
         <div class="mb-16">
             <h2 class="text-4xl md:text-6xl font-heading font-bold uppercase text-industrial-navy">Our Expertise</h2>
-            <div class="h-2 w-24 bg-zim-red mt-4"></div>
+            <div class="h-2 w-20 bg-zim-red mt-4"></div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-8 border-l-4 border-zim-red bg-slate-50 hover:shadow-xl transition duration-500">
                 <h3 class="font-heading text-xl font-bold mb-4 uppercase">General Servicing</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Comprehensive filter changes, fluid top-ups, and 21-point safety checks for light motor vehicles.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Comprehensive filter changes, fluid top-ups, and 21-point safety checks.</p>
             </div>
-            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+            <div class="p-8 border-l-4 border-zim-red bg-slate-50 hover:shadow-xl transition duration-500">
                 <h3 class="font-heading text-xl font-bold mb-4 uppercase">Advanced Diagnostics</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Precision computer-aided fault finding to solve complex engine and electrical issues fast.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Precision computer-aided fault finding to solve complex engine issues fast.</p>
             </div>
-            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+            <div class="p-8 border-l-4 border-zim-red bg-slate-50 hover:shadow-xl transition duration-500">
                 <h3 class="font-heading text-xl font-bold mb-4 uppercase">Brakes & Suspension</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Safety first: Powerbrake maintenance, shock absorber replacement, and alignment/balancing.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Powerbrake maintenance, shock replacements, and alignment.</p>
             </div>
-            <div class="p-10 border-l-4 border-zim-red bg-slate-50 hover:shadow-2xl transition duration-500">
+            <div class="p-8 border-l-4 border-zim-red bg-slate-50 hover:shadow-xl transition duration-500">
                 <h3 class="font-heading text-xl font-bold mb-4 uppercase">Battery & Power</h3>
-                <p class="text-slate-600 text-sm leading-relaxed">Full electrical testing, battery replacements, and alternator servicing for reliability.</p>
+                <p class="text-slate-600 text-sm leading-relaxed">Electrical testing, battery replacements, and alternator servicing.</p>
             </div>
+        </div>
+    </section>
+
+    <section id="quote-section" class="quote-bar py-20 px-6">
+        <div class="max-w-5xl mx-auto bg-white p-8 md:p-12 shadow-2xl rounded-sm">
+            <div class="text-center mb-10">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold uppercase text-industrial-navy">Get An Instant Quote</h2>
+                <p class="text-slate-500 mt-2 text-sm tracking-widest uppercase">Honest pricing for your vehicle maintenance</p>
+                <div class="h-1 w-16 bg-zim-red mx-auto mt-4"></div>
+            </div>
+            <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <input type="text" placeholder="Your Full Name" class="w-full p-4 bg-slate-50 border border-slate-200 focus:outline-none focus:border-zim-red transition">
+                    <input type="text" placeholder="Phone Number" class="w-full p-4 bg-slate-50 border border-slate-200 focus:outline-none focus:border-zim-red transition">
+                    <input type="text" placeholder="Vehicle Make & Model (e.g. Toyota Hilux)" class="w-full p-4 bg-slate-50 border border-slate-200 focus:outline-none focus:border-zim-red transition">
+                </div>
+                <div class="space-y-4">
+                    <textarea placeholder="Describe the issue or service needed (e.g. 50k km Service, Brake noise)" rows="5" class="w-full p-4 bg-slate-50 border border-slate-200 focus:outline-none focus:border-zim-red transition"></textarea>
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" class="w-full bg-zim-red text-white font-bold py-5 uppercase tracking-[0.2em] text-xs hover:bg-industrial-navy transition duration-300 shadow-lg">Submit Inquiry for Review</button>
+                </div>
+            </form>
         </div>
     </section>
 
@@ -161,69 +203,63 @@
                 <p class="text-slate-400 mt-4 tracking-widest text-xs uppercase">Take a look inside Lewisam Motors</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <img src="https://imgur.com/vrekquf.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 1">
-                <img src="https://imgur.com/pNJ3Whb.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 2">
-                <img src="https://imgur.com/DdmkPHO.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 3">
-                <img src="https://imgur.com/xnZWc3X.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 4">
-                <img src="https://imgur.com/NiroKY3.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 5">
-                <img src="https://imgur.com/yXzXn4O.png" class="gallery-img h-64 w-full object-cover cursor-pointer hover:opacity-80 transition" alt="Workshop 6">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                <img src="https://imgur.com/vrekquf.png" class="gallery-img h-48 md:h-64 w-full object-cover cursor-pointer hover:brightness-110 transition" alt="Workshop 1">
+                <img src="https://imgur.com/pNJ3Whb.png" class="gallery-img h-48 md:h-64 w-full object-cover cursor-pointer hover:brightness-110 transition" alt="Workshop 2">
+                <img src="https://imgur.com/DdmkPHO.png" class="gallery-img h-48 md:h-64 w-full object-cover cursor-pointer hover:brightness-110 transition" alt="Workshop 3">
+                <img src="https://imgur.com/xnZWc3X.png" class="gallery-img h-48 md:h-64 w-full object-cover cursor-pointer hover:brightness-110 transition" alt="Workshop 4">
+                <img src="https://imgur.com/NiroKY3.png" class="gallery-img h-48 md:h-64 w-full object-cover cursor-pointer hover:brightness-110 transition" alt="Workshop 5">
+                <img src="https://imgur.com/yXzXn4O.png" class="gallery-img h-48 md:h-64 w-full object-cover cursor-pointer hover:brightness-110 transition" alt="Workshop 6">
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 px-6 md:px-12 max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
-        <div class="lg:w-1/2">
-            <h2 class="text-4xl font-heading font-bold uppercase mb-8">Visit Our Garage</h2>
-            <div class="space-y-6">
-                <div>
-                    <h4 class="font-bold uppercase text-zim-red text-xs tracking-tighter">Address</h4>
-                    <p class="text-slate-700">178 Mangagwa Road, Harare, Zimbabwe</p>
-                </div>
-                <div>
-                    <h4 class="font-bold uppercase text-zim-red text-xs tracking-tighter">Contact Landline</h4>
-                    <p class="text-slate-700">0242 443912 / 0242 443913</p>
-                </div>
-                <div>
-                    <h4 class="font-bold uppercase text-zim-red text-xs tracking-tighter">Diaspora Friendly</h4>
-                    <p class="text-slate-700">We accept direct payments for local vehicle maintenance.</p>
-                </div>
-                <div class="flex gap-4 mt-8">
-                    <a href="https://www.facebook.com/LewisamMotors/" class="bg-industrial-navy text-white p-3 rounded-full hover:bg-zim-red transition">FB</a>
-                    <a href="https://www.instagram.com/lewisam_motors" class="bg-industrial-navy text-white p-3 rounded-full hover:bg-zim-red transition">IG</a>
+    <section id="contact" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-1/3">
+                <h2 class="text-4xl font-heading font-bold uppercase mb-8">Reach Out</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold uppercase text-zim-red text-xs tracking-widest mb-1">Physical Address</h4>
+                        <p class="text-slate-700 text-sm">178 Mangagwa Road, Harare, Zimbabwe</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold uppercase text-zim-red text-xs tracking-widest mb-1">Direct Lines</h4>
+                        <p class="text-slate-700 text-sm">0242 443912 / 13 / 14 / 15</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold uppercase text-zim-red text-xs tracking-widest mb-1">Support</h4>
+                        <p class="text-slate-700 text-sm">Diaspora friendly payment options available.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="lg:w-1/2 bg-slate-50 p-10 border border-slate-200">
-            <h3 class="font-heading text-2xl font-bold mb-6 uppercase">Get An Instant Quote</h3>
-            <form class="space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full p-4 border border-slate-300 focus:outline-none focus:border-zim-red">
-                <input type="text" placeholder="Vehicle Make/Model (e.g. Toyota Hilux)" class="w-full p-4 border border-slate-300 focus:outline-none focus:border-zim-red">
-                <textarea placeholder="Service Required" rows="4" class="w-full p-4 border border-slate-300 focus:outline-none focus:border-zim-red"></textarea>
-                <button type="submit" class="w-full bg-industrial-navy text-white font-bold py-4 uppercase tracking-widest hover:bg-zim-red transition duration-300">Submit Inquiry</button>
-            </form>
+
+            <div class="lg:w-2/3 h-[400px] bg-slate-100 border border-slate-200 shadow-inner overflow-hidden">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3798.8872922152865!2d31.104273075249566!3d-17.8000451831586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a5330e70e9b9%3A0xc07a3f4e1f7c7c34!2sLewisam%20Motors!5e0!3m2!1sen!2szw!4v1700000000000!5m2!1sen!2szw" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 text-slate-500 py-12 text-center text-xs px-6">
-        <div class="mb-4">
-            <img src="https://imgur.com/R1hldMe.png" class="h-8 mx-auto opacity-50 mb-4" alt="Footer Logo">
-            <p>© 2026 LEWISAM MOTORS — PRECISION AUTO CARE HARARE</p>
+    <footer class="bg-slate-900 text-slate-500 py-12 text-center text-[10px] px-6 border-t border-slate-800">
+        <div class="mb-6">
+            <img src="https://imgur.com/R1hldMe.png" class="h-8 mx-auto opacity-40 mb-4" alt="Footer Logo">
+            <p class="uppercase tracking-widest">© 2026 LEWISAM MOTORS — HARARE AUTO ARCHITECTS</p>
         </div>
-        <p class="uppercase tracking-widest">Designed by <span class="text-white font-bold">ZimWeblify</span></p>
+        <p class="uppercase tracking-widest">Developed by <span class="text-white font-bold">ZimWeblify</span></p>
     </footer>
 
     <a href="https://wa.me/2634443915" class="floating-whatsapp bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center gap-2">
-        <span class="font-bold text-sm ml-2">Chat with Lewisam</span>
+        <span class="font-bold text-sm ml-2">WhatsApp Us</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.248 2.248 3.488 5.236 3.488 8.403 0 6.557-5.332 11.892-11.891 11.892-1.999 0-3.956-.503-5.69-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.886-9.886 0-5.448-4.438-9.886-9.886-9.886-5.448 0-9.885 4.438-9.885 9.886 0 2.221.634 4.385 1.818 6.126l-1.104 4.037 4.179-1.085z"/></svg>
     </a>
 
     <div id="lightbox" onclick="this.style.display='none'">
-        <img id="lightbox-img" src="" class="max-w-[90%] max-h-[90%] border-4 border-white shadow-2xl">
+        <img id="lightbox-img" src="" class="max-w-[95%] max-h-[90%] border-2 border-white">
     </div>
 
     <script>
-        // Hero Slider
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         function rotateSlides() {
@@ -233,7 +269,6 @@
         }
         setInterval(rotateSlides, 5000);
 
-        // Simple Gallery Lightbox
         const galleryImgs = document.querySelectorAll('.gallery-img');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
